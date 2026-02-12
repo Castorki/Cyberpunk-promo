@@ -5,3 +5,6 @@ export { default as twitterLogo } from './twitter-logo.svg';
 export { default as youtubeLogo } from './youtube-logo.svg';
 export { default as twitchLogo } from './twitch-logo.svg';
 export { default as vkLogo } from './vk-logo.svg';
+export { default as bigCity } from './cityBig.png';
+export { default as city1 } from './city1.png';
+export { default as city2 } from './city2.png';
