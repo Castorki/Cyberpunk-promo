@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__social {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+.hero {
+    padding-top: 537px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: end;
+    // background-image: url('../src/assets/hero.png');
+    // background-repeat: no-repeat;
+
+
+    &__info {
+        max-width: 500px;
+        padding: 70px;
+        background-color: #F8F200;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        clip-path:
+            polygon(50px 0,
+                /* левый верхний угол - начало среза */
+                100% 0,
+                /* правый верхний - целый */
+                100% calc(100% - 50px),
+                /* правый нижний - конец среза */
+                calc(100% - 50px) 100%,
+                /* правый нижний - острый угол */
+                0 100%,
+                /* левый нижний - целый */
+                0 50px
+                /* левый верхний - острый угол */
+            );
+
+        &_text {
+            font-family: "Metal Mania", system-ui;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 63px;
+            color: #000000;
+        }
+
+        &_button {
+            padding: 19px 50px;
+            background: #000000;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            color: #F8F200;
+        }
+
+    }
+}
+
+header,
+.hero {
+    position: relative;
+}
+
+header::before,
+.hero::before {
+    content: '';
+    position: fixed;
+    /* fixed а не absolute, чтобы покрыть оба */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../src/assets/hero.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    z-index: -1;
+}

@@ -1,0 +1,82 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff">
+        <animate attributeName="stop-color" values="#00ffff;#aa80ff;#00ffff" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="60%" stop-color="#aa44ff">
+        <animate attributeName="stop-color" values="#aa44ff;#3a86ff;#aa44ff" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ff00aa">
+        <animate attributeName="stop-color" values="#ff00aa;#cc00ff;#ff00aa" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <filter id="glitchFilter">
+      <feTurbulence baseFrequency="0.01 0.03" numOctaves="3" seed="5" result="noise">
+        <animate attributeName="baseFrequency" values="0.01 0.03;0.03 0.06;0.01 0.03" dur="0.2s" repeatCount="indefinite" />
+      </feTurbulence>
+      <feColorMatrix in="noise" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 12 -5" result="glitchAlpha"/>
+      <feComposite in="SourceGraphic" in2="glitchAlpha" operator="in" result="glitchColor"/>
+      <feOffset in="glitchColor" dx="1" dy="0" result="glitchR">
+        <animate attributeName="dx" values="1;2;0;-1;1" dur="0.1s" repeatCount="indefinite" />
+      </feOffset>
+      <feOffset in="SourceGraphic" dx="-1" dy="0" result="glitchB">
+        <animate attributeName="dx" values="-1;-2;0;1;-1" dur="0.15s" repeatCount="indefinite" />
+      </feOffset>
+      <feBlend in="glitchR" in2="glitchB" mode="screen" result="glitchCombined"/>
+      <feMerge>
+        <feMergeNode in="glitchCombined"/>
+        <feMergeNode in="SourceGraphic" opacity="0.7"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M75 45 
+           Q 30 55, 38 100
+           Q 30 150, 78 160
+           L 95 135
+           Q 60 125, 65 100
+           Q 60 75, 92 65 Z"
+        fill="url(#neonFlow)"
+        filter="url(#glitchFilter) url(#neonGlow)"
+        transform="rotate(-5, 70, 100)">
+    <animate attributeName="opacity" values="0.95;1;0.9;1" dur="0.2s" repeatCount="indefinite" />
+  </path>
+
+  <path d="M122 50
+           L 152 50
+           Q 182 58, 178 92
+           Q 182 128, 148 128
+           L 125 128
+           L 125 158
+           L 102 158
+           L 102 50 Z
+           M 125 82
+           L 146 82
+           Q 162 88, 146 108
+           L 125 108 Z"
+        fill="url(#neonFlow)"
+        filter="url(#glitchFilter) url(#neonGlow)"
+        transform="rotate(-5, 130, 100)">
+    <animate attributeName="opacity" values="0.95;1;0.9;1" dur="0.25s" repeatCount="indefinite" />
+  </path>
+
+  <path d="M35 35 L42 38 L35 45 Z" fill="#00ffff" opacity="0.6" filter="url(#neonGlow)">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="0.3s" repeatCount="indefinite" />
+    <animate attributeName="d" values="M35 35 L42 38 L35 45 Z; M32 32 L45 35 L32 42 Z; M35 35 L42 38 L35 45 Z" dur="0.5s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M165 165 L172 160 L168 172 Z" fill="#b300ff" opacity="0.5" filter="url(#neonGlow)">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="0.4s" repeatCount="indefinite" />
+    <animate attributeName="d" values="M165 165 L172 160 L168 172 Z; M160 160 L175 158 L170 175 Z; M165 165 L172 160 L168 172 Z" dur="0.6s" repeatCount="indefinite" />
+  </path>
+</svg>
