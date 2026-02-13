@@ -8,3 +8,7 @@ export { default as vkLogo } from './vk-logo.svg';
 export { default as bigCity } from './cityBig.png';
 export { default as city1 } from './city1.png';
 export { default as city2 } from './city2.png';
+export { default as saleLogo } from './saleLogo.svg';
+export { default as gameConsoles } from './gameConsoles.png';
+export { default as gameBackGroundTop } from './gameBackGroundTop.png';
+export { default as gameBackGroundBottom } from './gameBackGroundBottom.png';
