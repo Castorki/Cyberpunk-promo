@@ -12,3 +12,11 @@ export { default as saleLogo } from './saleLogo.svg';
 export { default as gameConsoles } from './gameConsoles.png';
 export { default as gameBackGroundTop } from './gameBackGroundTop.png';
 export { default as gameBackGroundBottom } from './gameBackGroundBottom.png';
+export { default as hpLogo } from './hpLogo.svg';
+export { default as crossImg } from './crossImg.svg';
+export { default as monitor } from './monitor.png';
+export { default as brightColors } from './brightColors.svg';
+export { default as clearImages } from './clearImages.svg';
+export { default as fastAndSmoutheMotions } from './fastAndSmoutheMotions.svg';
+
+
