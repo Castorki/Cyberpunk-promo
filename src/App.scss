@@ -19,6 +19,19 @@
     color: #FFFFFF;
 }
 
+@keyframes slideShow {
+
+    0%,
+    33% {
+        z-index: 1;
+    }
+
+    34%,
+    100% {
+        z-index: 0;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -76,8 +89,39 @@ li {
     margin-bottom: 70px;
     display: flex;
     justify-content: end;
-    // background-image: url('../src/assets/hero.png');
-    // background-repeat: no-repeat;
+    position: relative;
+
+    &__background {
+        position: absolute;
+        top: -98px;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            z-index: 0;
+
+            $images: 'hero1.png', 'hero2.png', 'hero3.png';
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    background-image: url('../src/assets/hero#{$i}.png');
+                    animation: slideShow 15s infinite;
+                    animation-delay: ($i - 1) * 5s;
+                }
+            }
+        }
+    }
 
 
     &__info {
@@ -119,30 +163,10 @@ li {
             line-height: 40px;
             text-align: center;
             color: #F8F200;
+            cursor: pointer;
         }
 
     }
-}
-
-header,
-.hero {
-    position: relative;
-}
-
-header::before,
-.hero::before {
-    content: '';
-    position: absolute;
-    /* fixed а не absolute, чтобы покрыть оба */
-    top: -20px;
-    left: 0;
-    width: 99vw;
-    height: 102%;
-    background-image: url('../src/assets/hero.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    z-index: -1;
 }
 
 .about {
@@ -329,6 +353,7 @@ header::before,
             display: flex;
             align-items: center;
             color: #000000;
+            cursor: pointer;
         }
 
         &_checkBox {
