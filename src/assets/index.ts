@@ -18,5 +18,12 @@ export { default as monitor } from './monitor.png';
 export { default as brightColors } from './brightColors.svg';
 export { default as clearImages } from './clearImages.svg';
 export { default as fastAndSmoutheMotions } from './fastAndSmoutheMotions.svg';
+export { default as pcLogo } from './pcLogo.svg';
+export { default as playstationLogo } from './playstationLogo.svg';
+export { default as stadiaLogo } from './stadiaLogo.svg';
+export { default as xboxLogo } from './xboxLogo.svg';
+export { default as buyPhoto } from './buyPhoto.png';
+
+
 
 

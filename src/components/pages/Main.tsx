@@ -1,4 +1,5 @@
 import { About } from "./About"
+import { Buy } from "./Buy"
 import { Game } from "./Game"
 import { HP } from "./HP"
 import { Hero } from "./Hero"
@@ -10,6 +11,7 @@ export const Main = () => {
             <About />
             <Game />
             <HP />
+            <Buy />
         </main>
     )
 }

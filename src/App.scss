@@ -37,6 +37,10 @@ input[type="checkbox"] {
     appearance: none;
 }
 
+li {
+    list-style: none;
+}
+
 h1,
 h2 {
     font-family: "Metal Mania", system-ui;
@@ -426,6 +430,62 @@ header::before,
             line-height: 21px;
             color: #F8F200;
             cursor: pointer;
+        }
+    }
+}
+
+.buy {
+    display: flex;
+    background-color: #000;
+
+    &__info-container {
+        margin: 0 auto;
+    }
+
+    &__info {
+        padding: 70px 0 70px 32px;
+        width: 50%;
+
+        &_title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 63px;
+            color: #FFFFFF;
+        }
+
+        &_listTitle {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #52BEDC;
+        }
+
+        &_set {
+            padding-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .buy__set_element {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+            }
+        }
+
+        &_platforms {
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 65px);
+            row-gap: 56px;
+            column-gap: 80px;
+            // grid-column: span 2;
         }
     }
 }
