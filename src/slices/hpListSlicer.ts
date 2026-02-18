@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { HpListItem } from "../types/types";
+import type { ListItem } from "../types/types";
 import { hpList } from "../data/hpListData";
 
 type HpListState = {
-    items: HpListItem[]
+    items: ListItem[]
 }
 
 const initialState: HpListState = {

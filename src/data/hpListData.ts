@@ -1,7 +1,7 @@
-import type { HpListItem } from "../types/types";
+import type { ListItem } from "../types/types";
 
 
-export const hpList: HpListItem[] =  [
+export const hpList: ListItem[] =  [
     {
         id: Math.floor(Math.random() * 1000000),
         mark: 'brightColors',

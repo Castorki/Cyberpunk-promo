@@ -471,10 +471,14 @@ header::before,
             gap: 15px;
 
             .buy__set_element {
+                padding-left: 42px;
+                white-space: nowrap;
+                height: 32px;
+                line-height: 32px;
+                background-repeat: no-repeat;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
-                line-height: 21px;
                 color: #FFFFFF;
             }
         }
