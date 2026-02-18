@@ -23,6 +23,7 @@ export { default as playstationLogo } from './playstationLogo.svg';
 export { default as stadiaLogo } from './stadiaLogo.svg';
 export { default as xboxLogo } from './xboxLogo.svg';
 export { default as buyPhoto } from './buyPhoto.png';
+export { default as CD_ProjektLogo } from './CD_ProjektLogo.svg';
 
 
 

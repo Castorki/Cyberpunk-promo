@@ -448,4 +448,43 @@ header::before,
   row-gap: 56px;
   -moz-column-gap: 80px;
        column-gap: 80px;
+}
+
+.footer__top {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__top_right {
+  display: flex;
+  gap: 32px;
+}
+.footer__top_left {
+  display: flex;
+  gap: 32px;
+}
+.footer__top_link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.footer__bottom {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+.footer__bottom_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
 }/*# sourceMappingURL=App.css.map */

@@ -493,3 +493,49 @@ header::before,
         }
     }
 }
+
+.footer {
+    &__top {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_right {
+            display: flex;
+            gap: 32px;
+        }
+
+        &_left {
+            display: flex;
+            gap: 32px;
+        }
+
+        &_link {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+    }
+
+    &__bottom {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+
+        &_text {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #FFFFFF;
+        }
+    }
+}
