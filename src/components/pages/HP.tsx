@@ -1,4 +1,4 @@
-import { hpLogo, monitor, crossImg, cyberpunkLogo, clearImages, brightColors, fastAndSmoutheMotions } from "../../assets"
+import { hpLogo, monitor, crossImg, cyberpunkLogo } from "../../assets"
 import { useAppSelector } from "../../hooks/typedStateHook"
 
 export const HP = () => {
@@ -25,8 +25,6 @@ export const HP = () => {
                         <li key={item.id} className="hp__list_element"
                             style={{ backgroundImage: `url(../src/assets/${item.mark}.svg)` }}>{item.descr}</li>
                     ))}
-                    {/* <li className="hp__list_element">Кристальная четкость изображения</li>
-                    <li className="hp__list_element">Быстрые движения и плавный геймплей</li> */}
                 </ul>
                 <button className="hp__info_btn">Подробнее</button>
             </div>
