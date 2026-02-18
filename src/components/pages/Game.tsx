@@ -1,6 +1,48 @@
+import { useState } from "react"
 import { gameConsoles } from "../../assets"
+import type { FormData } from '../../types/types'
 
 export const Game = () => {
+
+    const [name, setName] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [file, setFile] = useState<File | null>(null);
+    const [checkbox, setCheckbox] = useState<boolean>(false);
+    const [emptiField, setEmptyField] = useState<boolean>(false);
+    const [wrongEmail, setWrongEmail] = useState<boolean>(false);
+    const [showError, setShowError] = useState<boolean>(false);
+    const [showSucces, setShowSucces] = useState<boolean>(false);
+    const [showIsLoading, setShowIsLoading] = useState<boolean>(false);
+
+    const checkValability = () => {
+
+        if (name.trim() === '' || email.trim() === '') {
+            setEmptyField(true);
+
+            setTimeout(() => {
+                setEmptyField(false)
+            }, 3000);
+            return -1;
+        }
+
+        if (!email.includes('@')) {
+            setEmptyField(true);
+
+            setTimeout(() => {
+                setEmptyField(false)
+            }, 3000);
+            return -1;
+        }
+
+    }
+
+    const handleSubmit = (e: SubmitEvent) => {
+        e.preventDefault();
+
+
+
+    }
+
     return (
         <section className="game center">
             <h2 className="game__title">Играй и выигрывай!</h2>
@@ -39,7 +81,7 @@ export const Game = () => {
                     </div>
                     <button className="game__form_submitButton" type="submit">Отправить</button>
                     <div className="game__form_checkBox">
-                        <input className="game__form_userAgreementCheck" type="checkbox" id="userAgreement" name="userAgreement" />
+                        <input className="game__form_userAgreementCheck" type="checkbox" id="userAgreement" name="userAgreement" required />
                         <label className="game__form_userAgreementLabel" htmlFor="userAgreement">Согласен на обработку персональных данных</label>
                     </div>
                 </form>

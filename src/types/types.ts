@@ -9,3 +9,10 @@ export type Platforms = {
     img: string,
     alt: string
 }
+
+export type FormData = {
+    name: string,
+    email: string,
+    file: File,
+    checkbox: boolean
+}
