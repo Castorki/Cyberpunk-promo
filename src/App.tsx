@@ -5,6 +5,7 @@ import { store } from './store/store'
 import { Header } from './components/Header';
 import { Main } from './components/pages/Main';
 import { Footer } from './components/Footer';
+import { ScrollRestoration } from './components/ScrollRestoration';
 
 
 function App() {
@@ -14,11 +15,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={
-            <>
-              <Header />
-              <Main />
-              <Footer />
-            </>
+            <ScrollRestoration>
+              <>
+                <Header />
+                <Main />
+                <Footer />
+              </>
+            </ScrollRestoration>
           }
           />
         </Routes>
