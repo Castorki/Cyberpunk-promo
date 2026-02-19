@@ -19,6 +19,21 @@
     color: #FFFFFF;
 }
 
+@mixin submitStatus ($status-color) {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $status-color;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+
 @keyframes slideShow {
 
     0%,
@@ -64,6 +79,26 @@ button,
 span,
 li {
     font-family: 'Roboto', sans-serif;
+}
+
+.success {
+    @include submitStatus(#4CAF50);
+}
+
+.emptyField {
+    @include submitStatus(#d35a03);
+}
+
+.wrongEmail {
+    @include submitStatus(#d35a03);
+}
+
+.loading {
+    @include submitStatus(#117ef3);
+}
+
+.requestError {
+    @include submitStatus(#ec1607);
 }
 
 
@@ -302,12 +337,14 @@ li {
         }
 
         &_fileInputContainer {
+            width: 463px;
             height: 120px;
             display: flex;
             position: relative;
         }
 
         &_uploadPicLabel {
+            width: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
