@@ -224,6 +224,7 @@ li {
         line-height: 34px;
         color: #777;
 
+
         &_specialColor {
             @include specialTextColor();
         }
@@ -296,6 +297,7 @@ li {
         font-size: 18px;
         line-height: 34px;
         color: #FFFFFF;
+
 
         &_specialColor {
             @include specialTextColor();
@@ -421,6 +423,19 @@ li {
                 background-repeat: no-repeat;
                 background-position: 60% 50%;
             }
+        }
+    }
+
+    &__console {
+        position: relative;
+        display: flex;
+
+        &_img.xbox {
+            position: absolute;
+        }
+
+        &_img.ps {
+            padding-left: 332px;
         }
     }
 }
@@ -551,7 +566,6 @@ li {
             grid-template-columns: repeat(2, 65px);
             row-gap: 56px;
             column-gap: 80px;
-            // grid-column: span 2;
         }
     }
 }
@@ -599,5 +613,526 @@ li {
             line-height: 14px;
             color: #FFFFFF;
         }
+    }
+}
+
+@media (max-width:1025px) {
+
+    .center {
+        padding-left: calc(50% - 470px);
+        padding-right: calc(50% - 470px);
+    }
+
+    .about__photo_item:last-child {
+        grid-row: 1;
+    }
+
+    .about__photo_item.big {
+        width: 952px;
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .game {
+
+        &::before {
+            top: -1px;
+        }
+
+        padding-bottom: 71px;
+    }
+
+
+
+    .game__title {
+        padding-left: 0;
+        padding-top: 162px;
+        max-width: 460px;
+    }
+
+    .game__article {
+        max-width: 460px;
+    }
+
+    .game__console_img.xbox {
+        top: -400px;
+    }
+
+    .game__console_img.ps {
+        padding-left: 0;
+    }
+
+    .hp__logos_wrapper {
+        flex-direction: column;
+    }
+
+    .hp__logos_item {
+        max-width: 460px;
+    }
+
+    .buy__photo {
+        max-width: 332px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 769px) {
+
+    .center {
+        padding-left: calc(50% - 350px);
+        padding-right: calc(50% - 350px);
+    }
+
+    .header__social {
+        gap: 27px;
+    }
+
+
+    .hero {
+        padding-top: 451px;
+
+        &__background {
+            top: -98px;
+
+            &_img {
+                height: 114.5%;
+            }
+        }
+
+        &__info {
+            width: 320px;
+            padding: 30px 12px;
+            align-items: center;
+
+            &_text {
+                font-size: 30px;
+                line-height: 31px;
+                text-align: center;
+            }
+
+            &_button {
+                padding: 10px 50px;
+                font-size: 20px;
+            }
+
+        }
+    }
+
+    .about {
+
+        &__title {
+            font-size: 30px;
+            line-height: 31px;
+        }
+
+        &__article {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        &__photo {
+
+            &_item {
+                width: 336px;
+
+                &.big {
+                    width: 700px;
+                }
+            }
+        }
+
+    }
+
+    .game {
+        &__title {
+            padding-top: 70px;
+            font-size: 30px;
+            line-height: 31px;
+            padding-left: 70px;
+
+            &::before {
+                content: url('../src/assets/saleLogoMini.svg');
+                top: 45px;
+            }
+        }
+
+        &__article {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        &__container {
+            gap: 0;
+        }
+
+        &__form {
+            width: 296px;
+
+            &_fileInputContainer {
+                width: 296px;
+            }
+
+            &_uploadPicLabel {
+                padding: 51px 65px;
+
+                .uploadPicture-text {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+
+                .uploadPicture-extention {
+                    display: none;
+                }
+            }
+
+            &_userPictureInput {
+                left: 0;
+            }
+
+            &_submitButton {
+                padding: 20px 50px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        &__console {
+
+            &_img {
+                width: 250px;
+            }
+
+            &_img.xbox {
+                right: -390px;
+                top: -570px;
+            }
+
+            &_img.ps {
+                position: absolute;
+                padding-left: 0;
+                right: -390px;
+                top: -270px;
+            }
+        }
+    }
+
+    .hp {
+
+        &__logos {
+            justify-content: center;
+
+            &_item.monitor {
+                max-width: 296px;
+            }
+
+            &_item.hpLogo {
+                max-width: 44px;
+            }
+
+            &_item.crossImg {
+                max-width: 40px;
+            }
+
+            &_item.cyberpunkLogo {
+                max-width: 175px;
+            }
+
+            &_wrapper {
+                flex-direction: row;
+                gap: 13px;
+            }
+        }
+
+        &__info {
+
+            &_title {
+                font-size: 30px;
+                line-height: 31px;
+            }
+
+            &_article {
+                font-size: 16px;
+                line-height: 32px;
+            }
+
+            .hp__list_element {
+                background-size: 24px;
+                height: 30px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+
+            &_btn {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    .buy {
+
+        &__info {
+            padding: 40px 0 70px 12px;
+            width: 90%;
+
+            &_title {
+                font-size: 30px;
+                line-height: 31px;
+            }
+
+            &_listTitle {
+                font-size: 20px;
+                line-height: 23px;
+            }
+
+            &_set {
+                padding-bottom: 40px;
+
+                .buy__set_element {
+                    white-space: normal;
+                    height: 30px;
+                    font-size: 16px;
+                    line-height: 19px;
+                    background-size: 24px;
+                }
+            }
+
+            &_platforms {
+                padding-top: 25px;
+                row-gap: 49px;
+                column-gap: 50px;
+            }
+        }
+    }
+
+    .footer {
+        &__top {
+            gap: 50px;
+            padding-top: 40px;
+            padding-bottom: 25px;
+            justify-content: center;
+
+            &_right {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            &_left {
+                align-items: center;
+                gap: 25px;
+            }
+
+            &_link {
+                font-size: 16px;
+                line-height: 19px;
+
+                & .cyberpunk {
+                    max-width: 200px;
+                }
+
+                & .cdProjeckt {
+                    max-width: 116px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+
+    .center {
+        padding-left: calc(50% - 170px);
+        padding-right: calc(50% - 170px);
+    }
+
+    .header {
+        margin-top: 20px;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .hero {
+
+        &__background {
+            top: -143px;
+
+            &_img {
+                height: 121%;
+            }
+        }
+
+        .hero__info_button {
+            width: 244px;
+            font-size: 17px;
+        }
+    }
+
+    .about {
+
+        &__photo {
+            grid-template-columns: repeat(1, 1fr);
+
+            .about__photo_item.big {
+                grid-column: span 1;
+                width: 336px;
+            }
+
+        }
+
+    }
+
+    .game {
+        padding-top: 90px;
+
+        &__title {
+            padding-top: 211px;
+            padding-left: 0;
+            font-size: 30px;
+            line-height: 31px;
+
+            &::before {
+                top: -12PX;
+                left: -5px;
+            }
+        }
+
+        &__article {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        &__console {
+
+            &_img {
+                width: 132px;
+            }
+
+            &_img.xbox {
+                right: 166px;
+                top: -835px;
+            }
+
+            &_img.ps {
+                position: absolute;
+                padding-left: 0;
+                right: 0;
+                top: -835px;
+            }
+        }
+    }
+
+    .hp {
+        flex-direction: column;
+        gap: 40px;
+
+        &__logos {
+            flex-direction: column;
+            justify-content: normal;
+        }
+    }
+
+    .buy {
+        flex-direction: column;
+
+        &__photo {
+            max-width: 425px;
+        }
+    }
+
+    .footer {
+
+        &__top {
+            flex-direction: column;
+        }
+
+    }
+}
+
+@media (max-width: 321px) {
+
+    .center {
+        padding-left: calc(50% - 150px);
+        padding-right: calc(50% - 150px);
+    }
+
+    .hero {
+
+        .hero__background_img {
+            height: 99%;
+        }
+    }
+
+    .hero__info {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        &_button {
+            width: 244px;
+            font-size: 17px;
+        }
+    }
+
+    .about {
+
+        &__photo {
+            grid-template-columns: repeat(1, 1fr);
+
+            .about__photo_item {
+                width: 300px;
+
+                &.big {
+                    width: 300px;
+                }
+            }
+
+        }
+
+    }
+
+    .game {
+        padding-top: 90px;
+
+        &__title {
+            padding-top: 211px;
+            padding-left: 0;
+            font-size: 30px;
+            line-height: 31px;
+
+            &::before {
+                top: -12PX;
+                left: -5px;
+            }
+        }
+
+        &__article {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        &__console {
+
+            &_img {
+                width: 132px;
+            }
+
+            &_img.xbox {
+                right: 166px;
+                top: -835px;
+            }
+
+            &_img.ps {
+                position: absolute;
+                padding-left: 0;
+                right: 0;
+                top: -835px;
+            }
+        }
+    }
+
+    .footer__top_left {
+        flex-direction: column;
     }
 }

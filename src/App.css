@@ -428,6 +428,16 @@ li {
   background-repeat: no-repeat;
   background-position: 60% 50%;
 }
+.game__console {
+  position: relative;
+  display: flex;
+}
+.game__console_img.xbox {
+  position: absolute;
+}
+.game__console_img.ps {
+  padding-left: 332px;
+}
 
 .hp {
   display: flex;
@@ -582,4 +592,375 @@ li {
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+}
+
+@media (max-width: 1025px) {
+  .center {
+    padding-left: calc(50% - 470px);
+    padding-right: calc(50% - 470px);
+  }
+  .about__photo_item:last-child {
+    grid-row: 1;
+  }
+  .about__photo_item.big {
+    width: 952px;
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .game {
+    padding-bottom: 71px;
+  }
+  .game::before {
+    top: -1px;
+  }
+  .game__title {
+    padding-left: 0;
+    padding-top: 162px;
+    max-width: 460px;
+  }
+  .game__article {
+    max-width: 460px;
+  }
+  .game__console_img.xbox {
+    top: -400px;
+  }
+  .game__console_img.ps {
+    padding-left: 0;
+  }
+  .hp__logos_wrapper {
+    flex-direction: column;
+  }
+  .hp__logos_item {
+    max-width: 460px;
+  }
+  .buy__photo {
+    max-width: 332px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 769px) {
+  .center {
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+  }
+  .header__social {
+    gap: 27px;
+  }
+  .hero {
+    padding-top: 451px;
+  }
+  .hero__background {
+    top: -98px;
+  }
+  .hero__background_img {
+    height: 114.5%;
+  }
+  .hero__info {
+    width: 320px;
+    padding: 30px 12px;
+    align-items: center;
+  }
+  .hero__info_text {
+    font-size: 30px;
+    line-height: 31px;
+    text-align: center;
+  }
+  .hero__info_button {
+    padding: 10px 50px;
+    font-size: 20px;
+  }
+  .about__title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .about__article {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .about__photo_item {
+    width: 336px;
+  }
+  .about__photo_item.big {
+    width: 700px;
+  }
+  .game__title {
+    padding-top: 70px;
+    font-size: 30px;
+    line-height: 31px;
+    padding-left: 70px;
+  }
+  .game__title::before {
+    content: url("../src/assets/saleLogoMini.svg");
+    top: 45px;
+  }
+  .game__article {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .game__container {
+    gap: 0;
+  }
+  .game__form {
+    width: 296px;
+  }
+  .game__form_fileInputContainer {
+    width: 296px;
+  }
+  .game__form_uploadPicLabel {
+    padding: 51px 65px;
+  }
+  .game__form_uploadPicLabel .uploadPicture-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .game__form_uploadPicLabel .uploadPicture-extention {
+    display: none;
+  }
+  .game__form_userPictureInput {
+    left: 0;
+  }
+  .game__form_submitButton {
+    padding: 20px 50px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .game__console_img {
+    width: 250px;
+  }
+  .game__console_img.xbox {
+    right: -390px;
+    top: -570px;
+  }
+  .game__console_img.ps {
+    position: absolute;
+    padding-left: 0;
+    right: -390px;
+    top: -270px;
+  }
+  .hp__logos {
+    justify-content: center;
+  }
+  .hp__logos_item.monitor {
+    max-width: 296px;
+  }
+  .hp__logos_item.hpLogo {
+    max-width: 44px;
+  }
+  .hp__logos_item.crossImg {
+    max-width: 40px;
+  }
+  .hp__logos_item.cyberpunkLogo {
+    max-width: 175px;
+  }
+  .hp__logos_wrapper {
+    flex-direction: row;
+    gap: 13px;
+  }
+  .hp__info_title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .hp__info_article {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .hp__info .hp__list_element {
+    background-size: 24px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .hp__info_btn {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .buy__info {
+    padding: 40px 0 70px 12px;
+    width: 90%;
+  }
+  .buy__info_title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .buy__info_listTitle {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .buy__info_set {
+    padding-bottom: 40px;
+  }
+  .buy__info_set .buy__set_element {
+    white-space: normal;
+    height: 30px;
+    font-size: 16px;
+    line-height: 19px;
+    background-size: 24px;
+  }
+  .buy__info_platforms {
+    padding-top: 25px;
+    row-gap: 49px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  .footer__top {
+    gap: 50px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+  .footer__top_right {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer__top_left {
+    align-items: center;
+    gap: 25px;
+  }
+  .footer__top_link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .footer__top_link .cyberpunk {
+    max-width: 200px;
+  }
+  .footer__top_link .cdProjeckt {
+    max-width: 116px;
+  }
+}
+@media (max-width: 426px) {
+  .center {
+    padding-left: calc(50% - 170px);
+    padding-right: calc(50% - 170px);
+  }
+  .header {
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .hero__background {
+    top: -143px;
+  }
+  .hero__background_img {
+    height: 121%;
+  }
+  .hero .hero__info_button {
+    width: 244px;
+    font-size: 17px;
+  }
+  .about__photo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about__photo .about__photo_item.big {
+    grid-column: span 1;
+    width: 336px;
+  }
+  .game {
+    padding-top: 90px;
+  }
+  .game__title {
+    padding-top: 211px;
+    padding-left: 0;
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .game__title::before {
+    top: -12PX;
+    left: -5px;
+  }
+  .game__article {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .game__console_img {
+    width: 132px;
+  }
+  .game__console_img.xbox {
+    right: 166px;
+    top: -835px;
+  }
+  .game__console_img.ps {
+    position: absolute;
+    padding-left: 0;
+    right: 0;
+    top: -835px;
+  }
+  .hp {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .hp__logos {
+    flex-direction: column;
+    justify-content: normal;
+  }
+  .buy {
+    flex-direction: column;
+  }
+  .buy__photo {
+    max-width: 425px;
+  }
+  .footer__top {
+    flex-direction: column;
+  }
+}
+@media (max-width: 321px) {
+  .center {
+    padding-left: calc(50% - 150px);
+    padding-right: calc(50% - 150px);
+  }
+  .hero .hero__background_img {
+    height: 99%;
+  }
+  .hero__info {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .hero__info_button {
+    width: 244px;
+    font-size: 17px;
+  }
+  .about__photo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about__photo .about__photo_item {
+    width: 300px;
+  }
+  .about__photo .about__photo_item.big {
+    width: 300px;
+  }
+  .game {
+    padding-top: 90px;
+  }
+  .game__title {
+    padding-top: 211px;
+    padding-left: 0;
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .game__title::before {
+    top: -12PX;
+    left: -5px;
+  }
+  .game__article {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .game__console_img {
+    width: 132px;
+  }
+  .game__console_img.xbox {
+    right: 166px;
+    top: -835px;
+  }
+  .game__console_img.ps {
+    position: absolute;
+    padding-left: 0;
+    right: 0;
+    top: -835px;
+  }
+  .footer__top_left {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=App.css.map */

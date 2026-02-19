@@ -8,11 +8,11 @@ export const HP = () => {
     return (
         <section className="hp center">
             <div className="hp__logos">
-                <img className="hp__logos_item" src={monitor} alt=""></img>
+                <img className="hp__logos_item monitor" src={monitor} alt=""></img>
                 <div className="hp__logos_wrapper">
-                    <img className="hp__logos_item" src={hpLogo} alt=""></img>
-                    <img className="hp__logos_item" src={crossImg} alt=""></img>
-                    <img className="hp__logos_item" src={cyberpunkLogo} alt=""></img>
+                    <img className="hp__logos_item hpLogo" src={hpLogo} alt=""></img>
+                    <img className="hp__logos_item crossImg" src={crossImg} alt=""></img>
+                    <img className="hp__logos_item cyberpunkLogo" src={cyberpunkLogo} alt=""></img>
                 </div>
             </div>
             <div className="hp__info">

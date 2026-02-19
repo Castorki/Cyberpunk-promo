@@ -6,12 +6,12 @@ export const Footer = () => {
         <footer className="footer ">
             <div className="footer__top center">
                 <div className="footer__top_left">
-                    <Link to={'/'} className="footer__top_link"><img src={cyberpunkLogo} alt=""></img></Link>
-                    <Link to={'/'} className="footer__top_link"><img src={CD_ProjektLogo} alt=""></img></Link>
+                    <Link to={'/'} className="footer__top_link "><img className="cyberpunk" src={cyberpunkLogo} alt=""></img></Link>
+                    <Link to={'/'} className="footer__top_link "><img className="cdProjeckt" src={CD_ProjektLogo} alt=""></img></Link>
                 </div>
                 <div className="footer__top_right">
-                    <Link to={'/'} className="footer__top_link">Лицензия</Link>
-                    <Link to={'/'} className="footer__top_link">Политика конфиденциальности</Link>
+                    <Link to={'/'} className="footer__top_link license">Лицензия</Link>
+                    <Link to={'/'} className="footer__top_link privacy">Политика конфиденциальности</Link>
                 </div>
             </div>
             <div className="footer__bottom center">

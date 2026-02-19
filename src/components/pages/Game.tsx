@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type SubmitEvent, useRef } from "react"
-import { gameConsoles } from "../../assets"
+import { xboxPicture, psPicture } from "../../assets"
 import type { FormData } from '../../types/types'
 
 export const Game = () => {
@@ -212,7 +212,8 @@ export const Game = () => {
                     </div>
                 )}
                 <div className="game__console">
-                    <img className="game__console_img" src={gameConsoles} alt="Game consoles: Xbox and PlayStation 5"></img>
+                    <img className="game__console_img xbox" src={xboxPicture} alt="Xbox"></img>
+                    <img className="game__console_img ps" src={psPicture} alt="PlayStation 5"></img>
                 </div>
             </div>
         </section>
