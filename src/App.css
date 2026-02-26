@@ -62,6 +62,7 @@ li {
   transform: translateX(-50%);
   background-color: #4CAF50;
   color: white;
+  text-align: center;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -76,6 +77,7 @@ li {
   transform: translateX(-50%);
   background-color: #d35a03;
   color: white;
+  text-align: center;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -90,6 +92,7 @@ li {
   transform: translateX(-50%);
   background-color: #d35a03;
   color: white;
+  text-align: center;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -104,6 +107,7 @@ li {
   transform: translateX(-50%);
   background-color: #117ef3;
   color: white;
+  text-align: center;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -118,6 +122,7 @@ li {
   transform: translateX(-50%);
   background-color: #ec1607;
   color: white;
+  text-align: center;
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);

@@ -17,7 +17,7 @@ export const Buy = () => {
                     <ul className="buy__info_set">
                         {setInfo.map(item => (
                             <li key={item.id} className="buy__set_element"
-                                style={{ backgroundImage: `url(../src/assets/${item.mark}.svg)` }}>{item.descr}</li>
+                                style={{ backgroundImage: `url(/${item.mark}.svg)` }}>{item.descr}</li>
 
                         ))}
                     </ul>
@@ -25,7 +25,7 @@ export const Buy = () => {
                     <ul className="buy__info_platforms">
                         {platformsList.map(item => (
                             <li key={item.id} className="buy__platforms_element">
-                                <img src={`../src/assets/${item.img}.svg`} alt={item.alt}></img>
+                                <img src={`/${item.img}.svg`} alt={item.alt}></img>
                             </li>
                         ))}
                     </ul>

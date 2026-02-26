@@ -35,7 +35,7 @@ export const HP = () => {
                 <ul className="hp__info_list">
                     {hpList.map(item => (
                         <li key={item.id} className="hp__list_element"
-                            style={{ backgroundImage: `url(../src/assets/${item.mark}.svg)` }}>{item.descr}</li>
+                            style={{ backgroundImage: `url(/${item.mark}.svg)` }}>{item.descr}</li>
                     ))}
                 </ul>
                 <button className={`hp__info_btn ${notAvailable ? 'notAvailable' : ''}`} onClick={handleClik} disabled={notAvailable}>{notAvailable ? 'Данное действие пока не доступно' : 'Подробнее'}</button>
