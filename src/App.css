@@ -6,6 +6,20 @@
     z-index: 0;
   }
 }
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -186,7 +200,7 @@ li {
 }
 .hero__info_button {
   padding: 19px 50px;
-  background: #000000;
+  background-color: #000000;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -194,6 +208,12 @@ li {
   text-align: center;
   color: #F8F200;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, padding ease;
+}
+.hero__info_button.notAvailable {
+  padding: 19px 10px;
+  background-color: red;
+  color: white;
 }
 
 .about {
@@ -500,6 +520,13 @@ li {
   line-height: 21px;
   color: #F8F200;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, padding ease, max-width ease;
+}
+.hp__info_btn.notAvailable {
+  max-width: 330px;
+  padding: 19px 10px;
+  background-color: red;
+  color: white;
 }
 
 .buy {
@@ -594,7 +621,7 @@ li {
   color: #FFFFFF;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1441px) {
   .center {
     padding-left: calc(50% - 470px);
     padding-right: calc(50% - 470px);

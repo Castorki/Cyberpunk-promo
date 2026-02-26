@@ -1,9 +1,21 @@
+import { useState } from "react";
 import { hpLogo, monitor, crossImg, cyberpunkLogo } from "../../assets"
 import { useAppSelector } from "../../hooks/typedStateHook"
 
 export const HP = () => {
 
     const hpList = useAppSelector(state => state.hpList.items);
+
+    const [notAvailable, setNotAvailable] = useState(false);
+
+    const handleClik = (): void => {
+        setNotAvailable(true);
+
+        setTimeout(() => {
+            setNotAvailable(false);
+        }, 3000);
+    }
+
 
     return (
         <section className="hp center">
@@ -26,7 +38,7 @@ export const HP = () => {
                             style={{ backgroundImage: `url(../src/assets/${item.mark}.svg)` }}>{item.descr}</li>
                     ))}
                 </ul>
-                <button className="hp__info_btn">Подробнее</button>
+                <button className={`hp__info_btn ${notAvailable ? 'notAvailable' : ''}`} onClick={handleClik} disabled={notAvailable}>{notAvailable ? 'Данное действие пока не доступно' : 'Подробнее'}</button>
             </div>
         </section>
     )
