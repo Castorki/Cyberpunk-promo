@@ -751,6 +751,16 @@ li {
             &_button {
                 padding: 10px 50px;
                 font-size: 20px;
+
+                transition:
+                    font-size ease,
+                    padding ease;
+
+                &.notAvailable {
+                    padding: 10px;
+                    font-size: 15px;
+
+                }
             }
 
         }
@@ -1005,6 +1015,13 @@ li {
         .hero__info_button {
             width: 244px;
             font-size: 17px;
+            transition:
+                font-size ease;
+
+            &.notAvailable {
+                font-size: 13px;
+
+            }
         }
     }
 

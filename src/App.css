@@ -696,6 +696,11 @@ li {
   .hero__info_button {
     padding: 10px 50px;
     font-size: 20px;
+    transition: font-size ease, padding ease;
+  }
+  .hero__info_button.notAvailable {
+    padding: 10px;
+    font-size: 15px;
   }
   .about__title {
     font-size: 30px;
@@ -876,6 +881,10 @@ li {
   .hero .hero__info_button {
     width: 244px;
     font-size: 17px;
+    transition: font-size ease;
+  }
+  .hero .hero__info_button.notAvailable {
+    font-size: 13px;
   }
   .about__photo {
     grid-template-columns: repeat(1, 1fr);
