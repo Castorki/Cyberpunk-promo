@@ -15,7 +15,7 @@ export const Game = () => {
     const [showIsLoading, setShowIsLoading] = useState<boolean>(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
         const { name, value, checked, files } = e.target;
 
         switch (name) {
@@ -36,7 +36,7 @@ export const Game = () => {
         }
     }
 
-    const checkValability = () => {
+    const checkValability = (): number | FormData => {
 
         if (name.trim() === '' || email.trim() === '') {
             setEmptyField(true);
@@ -74,7 +74,7 @@ export const Game = () => {
         };
     }
 
-    const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: SubmitEvent<HTMLFormElement>): Promise<undefined | string> => {
         e.preventDefault();
 
         const formData: number | FormData = checkValability();
