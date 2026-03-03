@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# Сайт посвященной промо акции к выходу Cyberpunk 2077
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Скриншот главной страницы](public/cyberpunkScreenshot.png)
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Это учебный проектпосвященной промо акции к выходу Cyberpunk 2077. 
 
-## React Compiler
+## Функционал
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Заявки на участие в розыгрыше
 
-## Expanding the ESLint configuration
+## Стек технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, Redux Toolkit, TypeScript, React Router
+- **Стили:** SCSS
+- **Сборка:** Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Установка и запуск
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  Склонировать репозиторий:
+    `git clone https://github.com/твой-логин/название-репозитория.git`
+2.  Перейти в папку с проектом:
+    `cd название-репозитория`
+3.  Установить зависимости:
+    `npm install`
+4.  Запустить проект:
+    `npm run dev`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Демо
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Посмотреть живую версию можно здесь: [https://snazzy-platypus-d06b0d.netlify.app/](ссылка)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Доступные скрипты
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+В директории проекта вы можете выполнить следующую команду: 
+
+### `npm run dev`
+
+Запускает приложение в режиме разработки.
+
+Страница будет перезагружаться при внесении изменений.\
+Вы также можете увидеть ошибки линтинга в консоли.
+
+### `npm run build`
+
+Собирает приложение для продакшена в папку `build`.
+В продакшен-режиме корректно упаковывает React и оптимизирует сборку для достижения наилучшей производительности.
+
+Сборка минифицирована, а имена файлов содержат хеши.
+Ваше приложение готово к развертыванию!
+
+### `npm run lint`
+
+Запускает скрипт проверяющий все файлы проекта на соответствие правилам: отступы, кавычки, неиспользуемые переменные, потенциальные ошибки и т.д.
+
+### `npm run preview`
+
+Этот скрипт делает локальный предпросмотр собранного проекта. После выполнения `npm run build` и получения готовой папки `dist` (или другой), `preview` поднимает простой веб-сервер, который раздает файлы из этой папки.
